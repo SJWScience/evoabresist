@@ -36,3 +36,9 @@ samtools sort output1.bam > output1.sorted.bam
 samtools index output1.sorted.bam
 
 ```
+> Calling variants using Freebayes
+
+```bash
+freebayes.py -f reference.fa -p 1 output1.sorted.bam > output1.raw.vcf
+
+```
