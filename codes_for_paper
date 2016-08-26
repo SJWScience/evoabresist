@@ -1,6 +1,6 @@
 ##This is a comment##
-'''shell
+```shell
 ls -l
 cd ..
 pwd
-'''
+```
