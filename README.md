@@ -2,7 +2,7 @@
 #### This is a list of codes used for X paper. Commands have been stripped of file names and replaced with generic placeholders
 #####Option 1 - "hands on method"
 
->Trimming raw sequences, using TRIMMOMATIC
+>**Trimming raw sequences, using TRIMMOMATIC**
 
 ```bash
 trimmomatic-0.30.jar PE -threads N -phred33 sample_read1.fastq.gz\
@@ -13,7 +13,7 @@ ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 LEADING:5 TRAILING:5 SLIDINGWINDOW:4:20 MINLE
 ``` 
 >I intentionally left the trimming to be quite lenient, this is a personal preference
 
->Mapping trimmed sequences to a reference sequence
+>**Mapping trimmed sequences to a reference sequence**
 
 ```bash
 bowtie2-build reference.fa outputname
@@ -26,7 +26,7 @@ bowtie2 -p N -t -x reference.fa -1 output1_forward_paired.fq.gz /
 
 >This is simply mapping the trimmed reads to the reference genome, using quite default parameters. There is quite a lot of changes to this that can be made to be more sensitive etc.
 
->Processing mapped reads
+>**Processing mapped reads**
 
 ```bash
 samtools view -b -S -o output1.bam output1.sam
@@ -36,7 +36,7 @@ samtools sort output1.bam > output1.sorted.bam
 samtools index output1.sorted.bam
 
 ```
-> Calling variants using Freebayes
+>**Calling variants using Freebayes**
 
 ```bash
 freebayes.py -f reference.fa -p 1 output1.sorted.bam > output1.raw.vcf
