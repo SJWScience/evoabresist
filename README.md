@@ -25,3 +25,14 @@ bowtie2 -p N -t -x reference.fa -1 output1_forward_paired.fq.gz /
 ``` 
 
 >This is simply mapping the trimmed reads to the reference genome, using quite default parameters. There is quite a lot of changes to this that can be made to be more sensitive etc.
+
+>Processing mapped reads
+
+```bash
+samtools view -b -S -o output1.bam output1.sam
+
+samtools sort output1.bam > output1.sorted.bam
+
+samtools index output1.sorted.bam
+
+```
