@@ -1,0 +1,6 @@
+##This is a comment##
+'''bash
+ls -l
+cd ..
+pwd
+'''
