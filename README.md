@@ -2,8 +2,8 @@
 #### This is a list of codes used for X paper. Commands have been stripped of file names and replaced with generic placeholders
 #####Option 1 - "hands on method"
 
-<pre>
 ```bash
+<pre>
 #Trimming raw sequences, using TRIMMOMATIC#
 
 trimmomatic-0.30.jar PE -threads N -phred33 /
@@ -24,6 +24,6 @@ bowtie2 -p N -t -x reference.fa -1 output1_forward_paired.fq.gz /
  -2 output1_reverse_paired.fq.gz -S output1.sam
  
 ##This is simply mapping the trimmed reads to the reference genome, using quite default parameters. There is quite a lot of changes to this that can be made to be more sensitive etc.##
-
-```
 </pre>
+```
+
