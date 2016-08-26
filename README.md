@@ -26,3 +26,4 @@ bowtie2 -p N -t -x reference.fa -1 output1_forward_paired.fq.gz /
 ##This is simply mapping the trimmed reads to the reference genome, using quite default parameters. There is quite a lot of changes to this that can be made to be more sensitive etc.##
 
 ```
+<\pre>
