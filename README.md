@@ -2,7 +2,7 @@
 #### This is a list of codes used for X paper. Commands have been stripped of file names and replaced with generic placeholders
 #####Option 1 - "hands on method"
 ```bash
-#Trimming raw sequences, using TRIMMOMATIC#
+>Trimming raw sequences, using TRIMMOMATIC
 
 trimmomatic-0.30.jar PE -threads N -phred33 /
  sample_read1.fastq.gz sample_read2.fastq.gz /
