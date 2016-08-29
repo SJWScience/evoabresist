@@ -42,3 +42,16 @@ samtools index output1.sorted.bam
 freebayes.py -f reference.fa -p 1 output1.sorted.bam > output1.raw.vcf
 
 ```
+
+>**Processing variants**
+
+>***I personally found manually processing variants based on quality, coverage, strand bias etc. to be more effective than filtering the vcf files with tools like bcffilter or vcfutils.***
+
+```
+filtering based on
+- QUAL >100
+- DP (coverage) >20
+- QR (phred score for variant) > 100
+- AO (alternate allele count) < 10
+
+```
