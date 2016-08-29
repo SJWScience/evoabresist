@@ -5,9 +5,9 @@
 >**Trimming raw sequences, using TRIMMOMATIC**
 
 ```bash
-trimmomatic-0.30.jar PE -threads N -phred33 sample_read1.fastq.gz /
-sample_read2.fastq.gz output1_forward_paired.fq.gz output1_forward_unpaired.fq.gz /
-output1_reverse_paired.fq.gz output1_reverse_unpaired.fq.gz /
+trimmomatic-0.30.jar PE -threads N -phred33 sample_read1.fastq.gz \
+sample_read2.fastq.gz output1_forward_paired.fq.gz output1_forward_unpaired.fq.gz \
+output1_reverse_paired.fq.gz output1_reverse_unpaired.fq.gz \
 ILLUMINACLIP:TruSeq3-PE.fa:2:30:10 LEADING:5 TRAILING:5 SLIDINGWINDOW:4:20 MINLEN:20
 
 ``` 
@@ -20,7 +20,7 @@ bowtie2-build reference.fa outputname
 
 samtools faidx reference.fa
 
-bowtie2 -p N -t -x reference.fa -1 output1_forward_paired.fq.gz /
+bowtie2 -p N -t -x reference.fa -1 output1_forward_paired.fq.gz \
  -2 output1_reverse_paired.fq.gz -S output1.sam
 ``` 
 
