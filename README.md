@@ -55,3 +55,20 @@ filtering based on
 - AO (alternate allele count) < 10
 
 ```
+
+>**Mapping variants to genes**
+
+>***The output from this can be directly turned into functional differences like non-synonymous changes, indels etc.***
+
+```bash
+bedtools intersect -b output1.vcf -a reference.gbff > overlapping_variants.bed
+
+```
+
+>**Determining genome coverage to visualise large scale genome duplications or deletions**
+
+```bash
+genomeCoverageBed -ibam sample1.sorted.bam -g refererence.fa -d > sample1_coverage.bed
+
+```
+
