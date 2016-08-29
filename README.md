@@ -101,7 +101,7 @@ colnames(sample1_means) <- c("mean", "sample", "pos")
 all_samples <- rbind(sample1_means, sample2_means, sample3_means)
 write.csv(all_samples, file = "~/path/you/want/all_samples.csv, header = TRUE)
 
-#making plot#
+#making plot.#
 
 p <- ggplot(all_samples, aes(x=pos, y=mean, group=sample, colour= factor(sample))) +
 geom_line()
