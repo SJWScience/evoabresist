@@ -72,3 +72,40 @@ genomeCoverageBed -ibam sample1.sorted.bam -g refererence.fa -d > sample1_covera
 
 ```
 
+>**Plotting genome coverage in R - using faceted ggplots**
+
+```R
+
+install.packages(ggplot2)
+install.packages(data.table)
+library(ggplot2)
+library(data.table)
+
+sample1 <- data.table::fread("~/path/to/file/sample1_coverage.bed", header = FALSE, data.table=F)
+
+step <- 100
+sequence <- seq(1, nrow(sample1), step)
+sample1_means <- rep(NA, floor(nrow(sample1)/step))
+for(ii in 1:(length(sequence)-1)){
+  jj <- sequence[ii]
+  sample1_means[ii] <- mean(sample1`[jj:(jj+step-1),3], na.rm=T)
+}
+
+sample1_means <- as.data.frame(sample1_means)
+sample1_means$sample <- 01
+sample1_means <- cbind(sample1_means, seq(0,nrow(sample1_means)*100-1,100))
+colnames(sample1_means) <- c("mean", "sample", "pos")
+
+#repeat the above for whichever samples you have, and then combine them to one data frame.#
+
+all_samples <- rbind(sample1_means, sample2_means, sample3_means)
+write.csv(all_samples, file = "~/path/you/want/all_samples.csv, header = TRUE)
+
+#making plot#
+
+p <- ggplot(all_samples, aes(x=pos, y=mean, group=sample, colour= factor(sample))) +
+geom_line()
+P <- p + facet_grid)sample ~ .)
+P
+
+```
