@@ -99,7 +99,7 @@ colnames(sample1_means) <- c("mean", "sample", "pos")
 #repeat the above for whichever samples you have, and then combine them to one data frame.#
 
 all_samples <- rbind(sample1_means, sample2_means, sample3_means)
-write.csv(all_samples, file = "~/path/you/want/all_samples.csv, header = TRUE)
+write.csv(all_samples, file = "~/path/you/want/all_samples.csv)
 
 #plotting all of this in a usable way :) #
 
