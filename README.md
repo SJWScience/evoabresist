@@ -109,3 +109,6 @@ P <- p + facet_grid)sample ~ .)
 P
 
 ```
+#####Option 2 - "breSEQ does most of the work"
+
+>**breSEQ (Deatherage & Barrick, 2014. Methods Mol Biol, **1151**) 
