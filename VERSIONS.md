@@ -21,6 +21,7 @@ BREseq 0.27.2
 R version 3.3.1
 > R Core Team. (2016). R: A language and environment for statistical computing. *R Foundation for statistical computing*. Vienna, Austria. https://www.R-project.org/.
 
+
 ggplot2 2.1.0
 > Wickham H. (2009). ggplot2: Elegant graphics for data analysis. *Springer-Verlag New York*.
 
