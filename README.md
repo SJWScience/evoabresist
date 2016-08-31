@@ -85,7 +85,8 @@ sample1 <- data.table::fread("~/path/to/file/sample1_coverage.bed", header = FAL
 
 step <- 100
 
-#step size is the size you want the mean coverage to be determined across, for better resolution decrease this, for faster computing and nicer looking outputs increase it#
+#step size is the size you want the mean coverage to be determined across, for better resolution decrease 
+this, for faster computing and nicer looking outputs increase it#
 
 sequence <- seq(1, nrow(sample1), step)
 sample1_means <- rep(NA, floor(nrow(sample1)/step))
