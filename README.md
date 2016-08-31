@@ -118,7 +118,8 @@ P
 >**breSEQ (Deatherage & Barrick, 2014. Methods Mol Biol, 1151) will do essentially everything listed above and give an amazing HTML output that just gives an additional level of user interaction, highly recommened, but i would also suggest the manual way for an additional level of validation of mutants.**
 
 ```bash
-breseq -j 20 -r ~/path/to/rerfernce.gbff -o sample1_out ~/path/to/reads/sample1_R1.fastq.gz \ ~/path/to/reads/sample1_R2.fastq.gz
+breseq -j 20 -r ~/path/to/rerfernce.gbff -o sample1_out ~/path/to/reads/sample1_R1.fastq.gz \
+~/path/to/reads/sample1_R2.fastq.gz
 
 ```
 
