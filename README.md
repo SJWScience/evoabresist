@@ -85,8 +85,8 @@ sample1 <- data.table::fread("~/path/to/file/sample1_coverage.bed", header = FAL
 
 step <- 100
 
-#step size is the size you want the mean coverage to be determined across, for better resolution decrease 
-this, for faster computing and nicer looking outputs increase it#
+#step size is the size you want the mean coverage to be determined across#
+#for better resolution decrease this, for faster computing and nicer looking outputs increase it#
 
 sequence <- seq(1, nrow(sample1), step)
 sample1_means <- rep(NA, floor(nrow(sample1)/step))
@@ -118,7 +118,7 @@ P
 >**breSEQ (Deatherage & Barrick, 2014. Methods Mol Biol, 1151) will do essentially everything listed above and give an amazing HTML output that just gives an additional level of user interaction, highly recommened, but i would also suggest the manual way for an additional level of validation of mutants.**
 
 ```bash
-breseq -j 20 -r ~/path/to/rerfernce.gbff -o sample1_out ~/path/to/reads/sample1_R1.fastq.gz ~/path/to/reads/sample1_R2.fastq.gz
+breseq -j 20 -r ~/path/to/rerfernce.gbff -o sample1_out ~/path/to/reads/sample1_R1.fastq.gz \ ~/path/to/reads/sample1_R2.fastq.gz
 
 ```
 
