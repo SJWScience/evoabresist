@@ -124,5 +124,3 @@ breseq -j 20 -r ~/path/to/rerfernce.gbff -o sample1_out ~/path/to/reads/sample1_
 ```
 
 >**breSEQ will also give a coverage bed file as an output. This can then be used in the R code to make coverage plots.**
-
-
