@@ -105,7 +105,7 @@ write.csv(all_samples, file = "~/path/you/want/all_samples.csv)
 
 p <- ggplot(all_samples, aes(x=pos, y=mean, group=sample, colour= factor(sample))) +
 geom_line()
-P <- p + facet_grid)sample ~ .)
+P <- p + facet_grid(sample ~ .)
 P
 
 ```
