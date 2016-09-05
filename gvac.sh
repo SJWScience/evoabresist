@@ -80,7 +80,7 @@ echo "${txtcyn}Processing is now complete ${txtrst} "
                                         exit;
                                                 fi
         echo ""
-echo "Do you want to continue on with variant analysis using Freebayes?"
+echo "Do you want to continue on with variant analysis using Freebayes? "
         PWD=$(pwd)
 read -p "Continue (y/n)?  " CONT
 if [ "$CONT" == "y" ]; then
