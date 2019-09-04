@@ -118,9 +118,9 @@ P
 >**breSEQ (Deatherage & Barrick, 2014. Methods Mol Biol, 1151) will do essentially everything listed above and give an amazing HTML output that just gives an additional level of user interaction, highly recommened, but i would also suggest the manual way for an additional level of validation of mutants.**
 
 ```bash
-breseq -j 20 -r ~/path/to/rerfernce.gbff -o sample1_out ~/path/to/reads/sample1_R1.fastq.gz \
+breseq -j 100 -r ~/path/to/rerfernce.gbff -o sample1_out ~/path/to/reads/sample1_R1.fastq.gz \
 ~/path/to/reads/sample1_R2.fastq.gz
 
 ```
 
->**breSEQ will also give a coverage bed file as an output. This can then be used in the R code to make coverage plots.**
+>**breSEQ will also give a coverage bed file as an output. This can then be used in the R code to make coverage plots. The reference we use is on the server it's in the Genomic data folder, and is called ILPAO_for_breseq.gff or something along those lines.**
